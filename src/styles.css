@@ -1,0 +1,153 @@
+/* Simple styling for starter project */
+:root{
+  --bg:#f7f9fc;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --accent:#2b8aef;
+}
+
+body{
+  margin:0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:#111827;
+}
+
+.header{
+  padding:1rem 1.25rem;
+  background:var(--card);
+  box-shadow:0 1px 2px rgba(0,0,0,0.05);
+}
+
+.main-grid{
+  display:grid;
+  grid-template-columns: 320px 1fr 320px;
+  gap:1rem;
+  padding:1rem;
+}
+
+.left, .center, .right{
+  background:var(--card);
+  padding:1rem;
+  border-radius:8px;
+  min-height:300px;
+}
+
+/* responsive */
+@media (max-width:900px){
+  .main-grid{
+    grid-template-columns: 1fr;
+  }
+}
+.blank-page{
+  opacity:0.9;
+  color:var(--muted);
+}
+.footer{
+  padding:0.75rem 1rem;
+  text-align:center;
+  font-size:12px;
+  color:var(--muted);
+}
+
+/* เพิ่มใน styles.css */
+.topup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+}
+.topup-form label {
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.topup-form input {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #e6eef8;
+  width: 100%;
+}
+.topup-form .actions {
+  margin-top: 0.5rem;
+}
+.topup-form button {
+  padding: 0.55rem 0.8rem;
+  border-radius: 6px;
+  background: #2b8aef;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.balance {
+  margin-top: 0.8rem;
+  color: #374151;
+}
+.message {
+  margin-top: 0.6rem;
+  color: #065f46;
+  background: #ecfdf5;
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+.machine-section {
+          margin-bottom: 12px;
+        }
+        .machine-list {
+          display: flex;
+          flex-direction: column;
+          gap: 0.6rem;
+          margin-top: 0.75rem;
+        }
+        .machine-card {
+          padding: 0.6rem;
+          border-radius: 6px;
+          border: 1px solid #e6eef8;
+          background: #fbfeff;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .machine-header {
+          font-size: 14px;
+        }
+        .machine-body {
+          display: flex;
+          gap: 0.75rem;
+          align-items: center;
+        }
+        .status-badge {
+          padding: 0.25rem 0.5rem;
+          border-radius: 999px;
+          text-transform: capitalize;
+          font-size: 12px;
+        }
+        .badge-available {
+          background: #dcfce7;
+          color: #166534;
+        }
+        .badge-inuse {
+          background: #fee2e2;
+          color: #991b1b;
+        }
+        .badge-off {
+          background: #f3f4f6;
+          color: #6b7280;
+        }
+        .water-select label {
+          margin-right: 8px;
+          font-size: 13px;
+        }
+        .actions button {
+          padding: 0.45rem 0.6rem;
+          border-radius: 6px;
+          border: 1px solid #e6eef8;
+          background: #fff;
+          cursor: pointer;
+          margin-right: 6px;
+        }
+        .actions button:hover {
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
