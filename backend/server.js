@@ -117,12 +117,27 @@ async function initDb() {
   const existing = await db.all("SELECT id FROM machines");
   if (existing.length === 0) {
     const machinesSeed = [
-      { id: "W-01", kind: "washing", capacity: "10kg", status: "available", timeLeft: null },
-      { id: "W-02", kind: "washing", capacity: "15kg", status: "in-use", timeLeft: 150 },
-      { id: "W-03", kind: "washing", capacity: "20kg", status: "out-of-service", timeLeft: null },
-      { id: "D-01", kind: "dryer", capacity: "15kg", status: "available", timeLeft: null },
-      { id: "D-02", kind: "dryer", capacity: "15kg", status: "available", timeLeft: null },
-      { id: "D-03", kind: "dryer", capacity: "15kg", status: "out-of-service", timeLeft: null },
+      { id: "W-11", kind: "washing", capacity: "10kg", status: "in-use", timeLeft: 150 },
+      { id: "W-12", kind: "washing", capacity: "10kg", status: "available", timeLeft: null },
+      { id: "W-13", kind: "washing", capacity: "10kg", status: "out-of-service", timeLeft: null },
+      { id: "W-21", kind: "washing", capacity: "15kg", status: "available", timeLeft: null },
+      { id: "W-22", kind: "washing", capacity: "15kg", status: "available", timeLeft: null },
+      { id: "W-23", kind: "washing", capacity: "15kg", status: "out-of-service", timeLeft: null },
+      { id: "W-24", kind: "washing", capacity: "15kg", status: "in-use", timeLeft: 180 },
+      { id: "W-25", kind: "washing", capacity: "15kg", status: "in-use", timeLeft: 130 },
+      { id: "W-31", kind: "washing", capacity: "20kg", status: "available", timeLeft: null },
+      { id: "W-31", kind: "washing", capacity: "20kg", status: "available", timeLeft: null },
+      { id: "W-31", kind: "washing", capacity: "20kg", status: "available", timeLeft: null },
+      { id: "D-11", kind: "dryer", capacity: "15kg", status: "in-use", timeLeft: 150 },
+      { id: "D-12", kind: "dryer", capacity: "15kg", status: "available", timeLeft: null },
+      { id: "D-13", kind: "dryer", capacity: "15kg", status: "out-of-service", timeLeft: null },
+      { id: "D-14", kind: "dryer", capacity: "15kg", status: "in-use", timeLeft: 120 },
+      { id: "D-15", kind: "dryer", capacity: "15kg", status: "available", timeLeft: null },
+      { id: "D-16", kind: "dryer", capacity: "15kg", status: "available", timeLeft: null },
+      { id: "D-17", kind: "dryer", capacity: "15kg", status: "in-use", timeLeft: 180 },
+      { id: "D-18", kind: "dryer", capacity: "15kg", status: "available", timeLeft: null },
+      { id: "D-21", kind: "dryer", capacity: "20kg", status: "available", timeLeft: null },
+      { id: "D-22", kind: "dryer", capacity: "20kg", status: "available", timeLeft: null },
     ];
     for (const m of machinesSeed) {
       await db.run(

@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 
 export default function LineNotify({
   pollIntervalMs = 5000,
-  apiBase = "https://401a2f79eedb.ngrok-free.app", // เปลี่ยนตาม ngrok URL หรือ localhost:3001
+  apiBase = "https://34d5876191d5.ngrok-free.app", // เปลี่ยนตาม ngrok URL หรือ localhost:3001
   lineGroupJoinUrl = "https://line.me/ti/g/gqLKtrmgUd",
 }) {
   const [machines, setMachines] = useState([]);
