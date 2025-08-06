@@ -53,7 +53,7 @@ export default function TopUpForm({ balance, onBalanceChange }) {
           <button
             type="submit"
             style={{
-              backgroundColor: "#4f46e5", // Indigo
+              backgroundColor: "#4f46e5", 
               color: "#fff",
               padding: "8px 16px",
               border: "none",

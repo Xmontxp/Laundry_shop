@@ -19,8 +19,6 @@ export default function LineNotify({
       if (isMountedRef.current) setMachines(data);
     } catch (err) {
       console.error(err);
-      // หากต้องการแสดง error เปิดบรรทัดนี้
-      // if (isMountedRef.current) setStatus("ดึงเครื่องล้มเหลว");
     }
   }
 
@@ -34,7 +32,6 @@ export default function LineNotify({
     };
   }, [pollIntervalMs, apiBase]);
 
-  // เงื่อนไข near finish
   const nearFinish = machines.filter(
     (m) =>
       m.status === "in-use" &&
@@ -42,7 +39,6 @@ export default function LineNotify({
       m.timeLeft <= 60
   );
 
-  // อัปเดต prev set (ไม่ส่งแจ้งเตือนจากฝั่ง client อีก)
   useEffect(() => {
     const currentIds = new Set(nearFinish.map((m) => m.id));
     prevNearFinishRef.current = currentIds;

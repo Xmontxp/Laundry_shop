@@ -37,7 +37,7 @@ export default function App() {
 
         <section className="right">
           <LineNotify
-            apiBase="http://localhost:3001" // เปลี่ยนตาม URL backend ของคุณ เช่น ngrok URL
+            apiBase="http://localhost:3001" // เปลี่ยนตาม URL backend เช่น ngrok URL
             lineGroupJoinUrl="https://line.me/ti/g/gqLKtrmgUd"
           />
         </section>

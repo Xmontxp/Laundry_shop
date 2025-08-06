@@ -50,7 +50,6 @@ body{
   color:var(--muted);
 }
 
-/* เพิ่มใน styles.css */
 .topup-form {
   display: flex;
   flex-direction: column;
